@@ -1,0 +1,214 @@
+
+*** Running vivado
+    with args -log thermostat_control_system.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source thermostat_control_system.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Oct  7 14:36:54 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source thermostat_control_system.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 513.742 ; gain = 201.711
+Command: synth_design -top thermostat_control_system -part xc7z030sbg485-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z030'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z030'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18088
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 971.875 ; gain = 454.180
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'thermostat_control_system' [C:/Users/mesut/OneDrive/Desktop/VHDL_UDEMY/thermostat_control_system/thermostat_control_system.srcs/sources_1/new/thermostat_control_system.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'thermostat_control_system' (0#1) [C:/Users/mesut/OneDrive/Desktop/VHDL_UDEMY/thermostat_control_system/thermostat_control_system.srcs/sources_1/new/thermostat_control_system.vhd:26]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1081.086 ; gain = 563.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.086 ; gain = 563.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z030sbg485-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.086 ; gain = 563.391
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z030sbg485-1
+INFO: [Synth 8-802] inferred FSM for state register 'r_current_state_reg' in module 'thermostat_control_system'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                          0000001 |                              000
+               s_heat_on |                          0000010 |                              001
+         s_furnace_ready |                          0000100 |                              010
+           s_furnace_off |                          0001000 |                              011
+               s_cool_on |                          0010000 |                              100
+              s_ac_ready |                          0100000 |                              101
+                s_ac_off |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_current_state_reg' using encoding 'one-hot' in module 'thermostat_control_system'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1081.086 ; gain = 563.391
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 3     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input    7 Bit        Muxes := 9     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 32    
+	   7 Input    3 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Device 21-9227] Part: xc7z030sbg485-1 does not have CEAM library.
+Part Resources:
+DSPs: 400 (col length:80)
+BRAMs: 530 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 1318.984 ; gain = 801.289
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 1318.984 ; gain = 801.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 1318.984 ; gain = 801.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1318.984 ; gain = 801.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1318.984 ; gain = 801.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1318.984 ; gain = 801.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1318.984 ; gain = 801.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1318.984 ; gain = 801.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1318.984 ; gain = 801.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     2|
+|3     |LUT1   |     1|
+|4     |LUT2   |    10|
+|5     |LUT3   |    12|
+|6     |LUT4   |    17|
+|7     |LUT5   |     7|
+|8     |LUT6   |    22|
+|9     |FDRE   |    45|
+|10    |FDSE   |     1|
+|11    |IBUF   |    21|
+|12    |OBUF   |    10|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   149|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1318.984 ; gain = 801.289
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1318.984 ; gain = 801.289
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1318.984 ; gain = 801.289
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1323.832 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1429.980 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c6710bfc
+INFO: [Common 17-83] Releasing license: Synthesis
+17 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 1429.980 ; gain = 916.238
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1429.980 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/mesut/OneDrive/Desktop/VHDL_UDEMY/thermostat_control_system/thermostat_control_system.runs/synth_1/thermostat_control_system.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file thermostat_control_system_utilization_synth.rpt -pb thermostat_control_system_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  7 14:37:48 2024...

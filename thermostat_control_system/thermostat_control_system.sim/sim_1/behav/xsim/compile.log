@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mesut/OneDrive/Desktop/VHDL_UDEMY/thermostat_control_system/thermostat_control_system.srcs/sources_1/new/thermostat_control_system.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'thermostat_control_system'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mesut/OneDrive/Desktop/VHDL_UDEMY/thermostat_control_system/thermostat_control_system.srcs/sim_1/new/thermostat_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'thermostat_testbench'
